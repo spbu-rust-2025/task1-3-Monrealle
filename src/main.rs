@@ -7,7 +7,7 @@ fn main() {
     io::stdin().read_line(&mut path).unwrap();
     let path = path.trim();
 
-    match fs::read_to_string(path) {
+    match fs::read(path) {
         Ok(_) => println!("success"),
         Err(_) => println!("failure"),
     }
